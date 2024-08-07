@@ -15,7 +15,7 @@ fetch('data/users.json')
     .then(response => response.json())
     .then(data => {
         users = data.users;
-        console.log('Benutzerdaten geladen:', users);
+        console.log('Benutzerdaten geladen:');
     })
     .catch(error => console.error('Fehler beim Laden der Benutzerdaten:', error));
 
@@ -32,6 +32,7 @@ fetch('data/quotes.json')
 // Zeige das PIN-Eingabefeld basierend auf der Auswahl
 function showPinInput(selectedUser) {
     console.log('User selected:', selectedUser);
+    document.getElementById('login-page').classList.add('hidden');
     document.getElementById('pin-input').classList.remove('hidden');
     console.log('pin-input - hidden removed:',  document.getElementById('pin-input').classList);
     document.getElementById('pin').setAttribute('data-user', selectedUser);
