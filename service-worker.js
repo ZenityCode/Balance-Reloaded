@@ -9,13 +9,15 @@ const urlsToCache = [
     '/data/quotes.json'
 ];
 
-// Installation des Service Workers und Hinzufügen von Dateien zum Cache
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then(cache => {
                 console.log('Cache wird geöffnet');
-                return cache.addAll(urlsToCache);
+                return cache.addAll(urlsToCache)
+                    .catch(error => {
+                        console.error('Cache addAll failed:', error);
+                    });
             })
     );
 });
