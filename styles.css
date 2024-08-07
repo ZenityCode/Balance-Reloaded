@@ -131,13 +131,13 @@ body {
 
 #login-page #pin-input {
     margin-top: 20px;
-    display: none;
 }
 
 #pin-input input[type="password"] {
     padding: 10px;
     margin-bottom: 10px;
     width: 100%;
+    min-height: 20px;
     border: 1px solid var(--border-color);
     border-radius: 5px;
     font-family: 'Lato', sans-serif;
