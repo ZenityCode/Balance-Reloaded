@@ -15,7 +15,7 @@ fetch('data/users.json')
     .then(response => response.json())
     .then(data => {
         users = data.users;
-        console.log('Benutzerdaten geladen:');
+        console.log('Benutzerdaten geladen.');
     })
     .catch(error => console.error('Fehler beim Laden der Benutzerdaten:', error));
 
@@ -25,7 +25,7 @@ fetch('data/quotes.json')
     .then(response => response.json())
     .then(data => {
         quotes = data.quotes;
-        console.log('Zitate geladen:', quotes);
+        console.log('Zitate geladen');
     })
     .catch(error => console.error('Fehler beim Laden der Zitate:', error));
 
