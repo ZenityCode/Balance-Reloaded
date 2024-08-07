@@ -32,7 +32,7 @@ fetch('data/quotes.json')
 // Zeige das PIN-Eingabefeld basierend auf der Auswahl
 function showPinInput(selectedUser) {
     console.log('User selected:', selectedUser);
-    document.getElementById('login-page').classList.add('hidden');
+    document.getElementById('select-user').classList.add('hidden');
     console.log('pin-input - BEVORE hidden removed:',  document.getElementById('pin-input').classList);
     document.getElementById('pin-input').classList.remove('hidden');
     console.log('pin-input - AFter hidden removed:',  document.getElementById('pin-input').classList);
