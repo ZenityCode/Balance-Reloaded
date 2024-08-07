@@ -29,9 +29,10 @@
 
 /* Farbpalette und Schriftarten */
 :root {
-    /* Primärfarben */
+   /* Primärfarben */
     --background-color: #f7f5f2; /* Weicher Creme-Ton */
-    --button-color: #40e0d0; /* Türkis */
+    /* --button-color: #40e0d0; /* Türkis */
+    --button-color: #619F95; /* Türkis */
     --button-pressed-color: #35b3a3; /* Dunkleres Türkis */
 
     /* Sekundärfarben */
@@ -39,12 +40,15 @@
     --text-highlight-color: #ff5f91; /* Magenta für Hervorhebungen */
 
     /* Weitere Farben */
-    --border-color: #d9d9d9; /* Neutrales Grau für Rahmen */
-    --card-gradient-start: #ffb07c; /* Pfirsich als Start für Farbverlauf */
+    /* --border-color: #d9d9d9; /* Neutrales Grau für Rahmen */
+	    --border-color: #c3bcc0; /* Neutrales Grau für Rahmen */
+    /* --card-gradient-start: #ffb07c; /* Pfirsich als Start für Farbverlauf */ 
+    --card-gradient-start: #F3F1F0; /* Pfirsich als Start für Farbverlauf */
     --card-gradient-end: #ffa07a; /* Lachs als Ende für Farbverlauf */
 
     /* Zusätzliche Farben für Hover und andere Zustände */
-    --hover-color: #fa8072; /* Lachs für Hover-Effekte */
+    /* --hover-color: #fa8072; /* Lachs für Hover-Effekte */
+    --hover-color: #DD9E8F; /* Lachs für Hover-Effekte */
     --shadow-color: rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefe */
 }
 
