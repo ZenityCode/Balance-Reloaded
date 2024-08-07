@@ -48,66 +48,8 @@ function login() {
         const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
         document.getElementById('quote').textContent = randomQuote;
 
-        // Anmeldedaten speichern
-        const loginData = {
-            date: new Date().toLocaleString(), // aktuelles Datum und Uhrzeit
-            device: getDeviceInfo()
-        };
-
-        saveLoginData(user.name, loginData);
     } else {
         alert('Falscher PIN. Bitte versuche es erneut.');
-    }
-}
-
-// Funktion, um Gerätedaten zu erhalten
-function getDeviceInfo() {
-    const userAgent = navigator.userAgent;
-    let device = "Unbekanntes Gerät";
-
-    if (/Mobi|Android/i.test(userAgent)) {
-        device = "Mobilgerät";
-    } else if (/iPad|Tablet/i.test(userAgent)) {
-        device = "Tablet";
-    } else {
-        device = "Desktop";
-    }
-
-    return `${device} (${userAgent})`;
-}
-
-// Anmeldedaten speichern
-function saveLoginData(userName, loginData) {
-    const existingData = JSON.parse(localStorage.getItem('loginData')) || {};
-    
-    // Wenn keine Daten vorhanden sind, für jeden Benutzer ein leeres Array initialisieren
-    if (!existingData[userName]) {
-        existingData[userName] = [];
-    }
-
-    // Neue Anmeldedaten hinzufügen
-    existingData[userName].push(loginData);
-
-    // Speichern der Daten im LocalStorage
-    localStorage.setItem('loginData', JSON.stringify(existingData));
-}
-
-// Anmeldedaten anzeigen und in der App rendern
-function showLoginData(userName) {
-    const existingData = JSON.parse(localStorage.getItem('loginData')) || {};
-    const loginHistoryDiv = document.getElementById('login-history');
-    loginHistoryDiv.innerHTML = ""; // Leeren des vorhandenen Inhalts
-    
-    if (existingData[userName]) {
-        existingData[userName].forEach((data, index) => {
-            const dataEntry = document.createElement('p');
-            dataEntry.textContent = `Anmeldung ${index + 1}: Datum: ${data.date}, Gerät: ${data.device}`;
-            loginHistoryDiv.appendChild(dataEntry);
-        });
-        loginHistoryDiv.classList.remove('hidden');
-    } else {
-        loginHistoryDiv.textContent = `Keine Anmeldedaten für ${userName} vorhanden.`;
-        loginHistoryDiv.classList.remove('hidden');
     }
 }
 
