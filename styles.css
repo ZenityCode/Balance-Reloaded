@@ -53,6 +53,13 @@
 }
 
 /* Allgemeine Stile */
+.hidden {
+	display: none;
+    /*opacity: 0;
+    pointer-events: none; /* Verhindert Interaktionen mit versteckten Elementen 
+    position: absolute; /* Entfernt das Element aus dem Fluss 
+    top: -9999px; /* Versteckt es von der Ansicht */
+}
 body {
     background-color: var(--background-color);
     color: var(--text-color);
@@ -76,13 +83,6 @@ body {
     height: 100vh;
     background-color: var(--background-color);
     transition: opacity 0.5s ease; /* Füge eine sanfte Übergangsanimation hinzu */
-}
-
-.hidden {
-    opacity: 0;
-    pointer-events: none; /* Verhindert Interaktionen mit versteckten Elementen */
-    position: absolute; /* Entfernt das Element aus dem Fluss */
-    top: -9999px; /* Versteckt es von der Ansicht */
 }
 
 #splash-screen .logo {
