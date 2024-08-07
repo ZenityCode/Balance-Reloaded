@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         document.getElementById('splash-screen').classList.add('hidden');
         document.getElementById('login-page').classList.remove('hidden');
-        console.log('Splash screen hidden, login page shown');
+         console.log('splasch-screen - AFter hidden removed:',  document.getElementById('splash-screen').classList);
     }, 2000);
 });
 
