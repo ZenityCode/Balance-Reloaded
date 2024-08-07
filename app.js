@@ -33,9 +33,9 @@ fetch('data/quotes.json')
 function showPinInput(selectedUser) {
     console.log('User selected:', selectedUser);
     document.getElementById('select-user').classList.add('hidden');
-    console.log('select-User - BEVORE hidden removed:',  document.getElementById('select-user').classList);
+    console.log('pin input - BEVORE hidden removed:',  document.getElementById('pin-input').classList);
     document.getElementById('pin-input').classList.remove('hidden');
-    console.log('select-User - AFter hidden removed:',  document.getElementById('select-user').classList);
+    console.log('pin-input - AFter hidden removed:',  document.getElementById('pin-input').classList);
     document.getElementById('pin').setAttribute('data-user', selectedUser);
 }
 
