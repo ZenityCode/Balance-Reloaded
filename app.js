@@ -34,8 +34,8 @@ function showPinInput(selectedUser) {
     console.log('User selected:', selectedUser);
     document.getElementById('login-page').classList.add('hidden');
     console.log('pin-input - BEVORE hidden removed:',  document.getElementById('pin-input').classList);
-    document.getElementById('AFTER pin-input').classList.remove('hidden');
-    console.log('pin-input - hidden removed:',  document.getElementById('pin-input').classList);
+    document.getElementById('pin-input').classList.remove('hidden');
+    console.log('pin-input - AFter hidden removed:',  document.getElementById('pin-input').classList);
     document.getElementById('pin').setAttribute('data-user', selectedUser);
 }
 
