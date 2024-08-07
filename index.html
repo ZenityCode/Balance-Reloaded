@@ -18,14 +18,16 @@
     <!-- Login Page -->
     <div id="login-page" class="screen hidden">
         <h2>Willkommen zu Balance Reloaded</h2>
+        <div id ="select-user">
         <p>Wähle bitte deinen Zugang:</p>
         <button onclick="showPinInput('Oliver')">Oliver</button>
         <button onclick="showPinInput('Anya')">Anya</button>
         <!-- <button onclick="showPinInput('Apa')">Apa</button> -->
         <button onclick="showPinInput('Gast')">Gast</button>
+        </div>
 
         <div id="pin-input" class="screen hidden">
-            <h3>Du solltest einloggen..</h3>
+            <h3>Du solltest dich einloggen..</h3>
             <input type="password" id="pin" placeholder="Gib deinen PIN ein">
             <button onclick="login()">Login</button>
         </div>
