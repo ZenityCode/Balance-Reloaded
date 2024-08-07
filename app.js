@@ -1,6 +1,6 @@
 // App-Start
 document.addEventListener('DOMContentLoaded', () => {
-    // Zeige den Splash Screen und wechsle zur Login-Seite nach 2 Sekunden
+    // Zeige den Splash Screen und wechsle zur Login-Seite nach 3 Sekunden
     console.log('DOMContentLoaded event triggered');
     setTimeout(() => {
         document.getElementById('splash-screen').classList.add('hidden');
@@ -33,6 +33,7 @@ fetch('data/quotes.json')
 function showPinInput(selectedUser) {
     console.log('User selected:', selectedUser);
     document.getElementById('pin-input').classList.remove('hidden');
+    console.log('pin-input - hidden removed:',  document.getElementById('pin-input').classList);
     document.getElementById('pin').setAttribute('data-user', selectedUser);
 }
 
