@@ -1,12 +1,12 @@
 const CACHE_NAME = 'balance-reloaded-cache-v1';
 const urlsToCache = [
     '/',
-    '/index.html',
-    '/styles.css',
-    '/app.js',
-    '/img/logo.png',
-    '/data/users.json',
-    '/data/quotes.json'
+    'index.html',
+    'styles.css',
+    'app.js',
+    'img/logo.png',
+    'data/users.json',
+    'data/quotes.json'
 ];
 
 // Installation des Service Workers und Hinzufügen von Dateien zum Cache
