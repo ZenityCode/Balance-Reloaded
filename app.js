@@ -33,7 +33,7 @@ fetch('data/quotes.json')
 function showPinInput(selectedUser) {
     console.log('User selected:', selectedUser);
     document.getElementById('select-user').classList.add('hidden');
-    document.getElementById('pin-input').style.display = "flex";
+    document.getElementById('pin-input').classList.remove('hidden');
     document.getElementById('pin').setAttribute('data-user', selectedUser);
 }
 
