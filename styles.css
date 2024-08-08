@@ -29,7 +29,7 @@
 
 /* Farbpalette und Schriftarten */
 :root {
-   /* Primärfarben */
+    /* Primärfarben */
     --background-color: #f7f5f2; /* Weicher Creme-Ton */
     /* --button-color: #40e0d0; /* Türkis */
     --button-color: #619F95; /* Türkis */
@@ -53,7 +53,6 @@
 }
 
 /* Allgemeine Stile */
-
 body {
     background-color: var(--background-color);
     color: var(--text-color);
@@ -77,6 +76,13 @@ body {
     height: 100vh;
     background-color: var(--background-color);
     transition: opacity 0.5s ease; /* Füge eine sanfte Übergangsanimation hinzu */
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none; /* Verhindert Interaktionen mit versteckten Elementen */
+    position: absolute; /* Entfernt das Element aus dem Fluss */
+    top: -9999px; /* Versteckt es von der Ansicht */
 }
 
 #splash-screen .logo {
@@ -135,7 +141,8 @@ body {
 
 #pin-input input[type="password"] {
     padding: 10px;
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
+    width: 100%;
     border: 1px solid var(--border-color);
     border-radius: 5px;
     font-family: 'Lato', sans-serif;
@@ -167,15 +174,6 @@ body {
     text-align: center;
     margin-bottom: 20px;
 }
-
-.hidden {
-	display: none;
-    /*opacity: 0;
-    pointer-events: none; /* Verhindert Interaktionen mit versteckten Elementen 
-    position: absolute; /* Entfernt das Element aus dem Fluss 
-    top: -9999px; /* Versteckt es von der Ansicht */
-}
-
 
 /* Footer */
 footer {
