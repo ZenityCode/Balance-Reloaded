@@ -140,6 +140,7 @@ body {
 }
 
 #pin-input input[type="password"] {
+    display: none;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid var(--border-color);
